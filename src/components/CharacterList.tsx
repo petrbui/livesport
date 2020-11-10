@@ -97,6 +97,7 @@ const CharacterList = () => {
   return (
     <div className='characters'>
       <h1>Final Space Characters</h1>
+      <h5>API sort by Petr Bui</h5>
       <button
         className='characters-btn'
         onClick={() => setIsSortedByAlphabet(!isSortedByAlphabet)}
