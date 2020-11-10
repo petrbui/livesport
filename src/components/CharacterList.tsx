@@ -21,14 +21,26 @@ const CharacterList = () => {
   };
 
   return (
-    <ul>
-      {data.slice(0, 5).map((character) => (
-        <li key={character.id}>
-          <img src={character.img_url} alt={character.alias} />
-          <p>{character.name}</p>
-        </li>
-      ))}
-    </ul>
+    <div className='CharacterList'>
+      <h1>Final Space Characters</h1>
+      <div className='CharacterList__table'>
+        {data.map((character) => (
+          <div className='CharacterList__table__item' key={character.id}>
+            <div>
+              <img
+                className='CharacterList__table__item__img'
+                src={character.img_url}
+                alt={character.alias}
+              />
+
+              <p className='CharacterList__table__item__name'>
+                {character.name}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 export default CharacterList;
